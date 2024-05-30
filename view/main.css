@@ -1,0 +1,1242 @@
+* {
+    scrollbar-width: none;
+    font-family: sans-serif;
+}
+
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.topbar {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 5%;
+    right: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.topbar h3 {
+    padding-left: 80px;
+    color:white;
+
+}
+
+.topbar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-right: 80px;
+}
+
+.topbar ul li {
+    list-style: none;
+}
+
+.topbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.signin {
+    background-color: rgb(9, 134, 156);
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-left: 100px;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.signin:hover {
+    background-color: rgb(15, 148, 172);
+    text-decoration: none;
+}
+
+.left,.right {
+    width: 430px;
+}
+
+.left {
+    position: relative;
+    text-align: justify;
+    color: whitesmoke;
+}
+
+.left h1 {
+    font-size: 45px;
+}
+
+.left h2 {
+    margin-bottom: -10px;
+}
+
+.index {
+    background-image: url('images/loanbg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.index h1,.index p,.readmore{
+    color: white;
+    padding-left: 80px;
+}
+
+.index  h1 {
+    font-size: 40px;
+}
+.index p {
+    text-transform: uppercase;
+    margin-top: -15px;
+}
+
+.readmore {
+    text-decoration: none;
+    background-color: rgb(11, 139, 161);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    transform: translateX(80px);
+    transition: 0.2s ease-in-out;
+}
+
+.readmore:hover {
+    background-color: rgb(15, 148, 172);
+}
+
+.loginpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 50px;
+    box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.loginpage img {
+    width: 60px;
+}
+
+.loginpage p {
+    font-size: 24px;
+}
+
+#reg {
+    font-size: 16px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input img {
+    width: 15px;
+    background-color: rgb(204, 204, 204);
+    padding: 10px;
+    margin-top: -10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid gray;
+}
+
+.loginpage input {
+    margin-bottom: 10px;
+    width: 270px;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid gray; 
+    outline: none;
+    border-left: 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remember-me div {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    width: 20px;
+    position: absolute;
+    left: 45px;
+    margin-top: 7px;
+    accent-color: rgb(11, 139, 161);
+}
+
+.remember-me label {
+    position: absolute;
+    left: 70px;
+}
+
+.remember-me a {
+    position: absolute;
+    right: 50px;
+    text-decoration:none;
+    color: rgb(11, 139, 161);
+}
+
+.remember-me a:hover {
+    text-decoration: underline;
+}
+
+.loginpage button {
+    width: 325px;
+    background-color: rgb(11, 138, 161);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.loginpage button:hover{
+    background-color: rgb(21, 155, 179);
+}
+
+#signup {
+    color: rgb(11, 139, 161);
+}
+
+hr {
+    width: 100%;
+}
+
+#copywrite {
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+}
+
+.regform,.view_info {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: none;
+    background-color: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+}
+
+.register-form {
+    flex-wrap: wrap;
+    position: relative;
+    width: 1150px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 0 20px 20px;
+    box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.r1 label {
+    display: flex;
+    align-items: center;
+}
+
+.register-form input[type="radio"] {
+    accent-color: rgb(11, 150, 11);
+}
+
+.r4 label {
+    display: flex;
+    align-items: center;
+}
+
+.register-form input {
+    font-size: 15px;
+    color: rgb(29, 29, 29);
+}
+
+.register-form input:focus,.register-form select:focus {
+    border: 1px solid #126c87;
+}
+
+.register-form p {
+    font-size: 12px;
+    color: rgb(112, 112, 112);
+}
+
+.register-form span {
+    color: red;
+    font-size: 18px;
+}
+
+.register-form a {
+    text-decoration: none;
+}
+
+.register-form a:hover {
+    text-decoration: underline;
+}
+
+.r1 button {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: rgb(109, 109, 109);
+    transition: 0.1s ease-in-out;
+}
+
+.r1 button:hover {
+    background-color: rgb(224, 224, 224);
+    border-radius: 50px;
+}
+
+.r1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+}
+
+.r1 p {
+    font-size: 15px;
+}
+
+.r2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-form h1  {
+  margin-bottom: -10px;
+}
+
+.r3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.r3 input,.r4 input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 198px;
+}
+
+.r3 input:focus,.r4 input:focus {
+    outline: none;
+}
+
+.r4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.r4 input {
+    width: 428px;
+    margin-top: 10px;
+}
+
+.r5 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.r5 select {
+    padding: 9px;
+    border-radius: 5px;
+    width: 143px;
+    font-size: 15px;
+    outline: none;
+}
+
+.b1 {
+    display: flex;
+    gap: 10px;
+}
+
+.b1 input {
+    width: 200px;
+    outline: none;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 0;
+    margin-top: 0px;
+}
+
+.b2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.b2 input {
+    outline: none;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.b2 pre {
+    font-size: 12px;
+    color: red;
+    margin: 8px 0 0 0;
+}
+
+.b3 {
+    display: flex;
+    gap: 10px;
+    margin-top: -5px;
+}
+
+.b3 input {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    width: 200px;
+}
+
+.uploads {
+    text-align: center;
+    justify-content: center;
+    gap:60px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 1px;
+    flex-wrap: wrap;
+}
+
+.uploads div {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+    margin-bottom: -62px;
+    transform: translateX(10px);
+}
+
+.uploads input[type="file"] {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.uploads img {
+    height: 112px;
+    width: 112px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.regbtn {
+    text-align: center;
+}
+
+.regbtn button {
+    background-color: rgb(11, 150, 11);
+    padding: 8px 10px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.regbtn button:hover {
+    background-color: rgb(72, 139, 72);
+}
+
+/* ------DASHBOARD------ */
+.dtop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: white;
+    width: 100%;
+    height: 6vh;
+    position: fixed;
+    top: 0;
+    left: 0 ;
+    background-color: rgb(11, 139, 161);
+    z-index: 1;
+}
+
+.dtop-left {
+    display: flex;
+    justify-content: space-between;
+    width: 20.5%;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.dtop-right {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    padding-right: 30px;
+    position: relative;
+}
+
+.dtop-right i {
+     position: absolute;
+     right: 100px;
+    fill: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dtop a {
+    text-decoration: none;
+    font-size: 50px;
+    cursor: default;
+}
+
+.profile{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dtop img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.dtop img:hover {
+    background-color: #227791;
+    padding: 5px;
+}
+
+.dtop input {
+    margin-left: 20px;
+    padding: 5px;
+    width: 250px;
+}
+.dtop-left svg {
+    cursor: pointer;
+}
+.dtop-left button {
+    padding: 5px 7px;
+}
+.dtop-left button:hover{
+    background-color: rgb(120,120,120,0.5);
+    border-radius: 50%;
+    padding: 5px 7px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-height: 94vh;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: #105f77;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-shadow:  0 7px 5px 5px rgb(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.sidebar img {
+    padding-top: 20px;
+    width: 100px;
+}
+
+.sidebar hr {
+    width: 96%;
+}
+
+.sidebar button {
+    text-align: left;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-left: 30px;
+}
+
+.sidebar button:hover {
+    background-color: #176f8a;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 90%;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Style for active button */
+.button button.active {
+    background-color: #6ed1f0;
+    color: black;
+    padding-left: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.content {
+    width: 80%;
+    height: 94vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    background-color: rgb(236, 236, 236);
+    display: flex;flex-direction: column;
+    align-items: center;
+}
+
+.c1 {
+    width: 100%;
+    height: 20vh;
+    background-color: #143a47;
+}
+
+.dashboard { 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+}
+.dashboard .card {
+    width: 400px;
+    height: 20vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.5);
+    background-color: rgb(235, 142, 56);
+    transform: translate(58px, -60px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+code {
+    color: white;
+    font-size: 75px;
+}
+.dashboard .card p {
+    font-size: 25px;
+    position: absolute;
+    top:-10px;
+    left: 20px;
+    font-weight: bold;
+    color: white;
+}
+.loans,.admin_loans,.manage_users,.admin_billing,.user_billing,.user_savings,.admin_savings {
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    transform: translateY(130px);
+    position: absolute;
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    border: none;
+}
+
+th {
+    background-color: #d1e1e9;
+    padding: 20px;
+    border-bottom: 1px solid rgb(143, 143, 143);
+}
+
+td {
+    padding-left: 20px;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pages p { 
+    background-color: #bbbbbb;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.pages button {
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.loans-btn button {
+    background-color: #105f77;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loans-btn button:hover {
+    background-color: #2d829c;
+}
+
+  .add-loan {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+   }
+
+   .add-loan div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .add-loan h2 {
+    margin-top: 0;
+   }
+
+   .add-loan form {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 5px;
+    position: relative;
+   }
+
+   .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border:none;
+    font-size: 15px;
+    color: rgb(153, 153, 153);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+   }
+
+   .close:hover {
+    background-color: rgb(226, 226, 226);
+    border-radius: 50px;
+   }
+
+   .add-loan label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .add-loan input,
+    .add-loan select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    .submit {
+        background: transparent;
+        background-color: rgb(0, 206, 0);
+        border: none;
+        padding: 10px;
+        width: 150px;
+        font-size: 15px;
+        font-weight: 550;
+        color: white;
+        border-radius: 5px;
+    }
+    .submit:hover {
+        background-color: rgb(0, 167, 0);
+    }
+
+@media screen and (max-width: 500px) {
+    .register-form {
+        transform: translateY(450px);
+    }
+    .uploads {
+        flex-direction: row;
+        padding-bottom: 100px;
+    }
+}
+
+.account {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #143a47;
+    border: 1px solid rgb(88, 88, 88);
+    color:rgb(216, 216, 216);
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    position: fixed;
+    top: 70px;
+    right: 30px;
+    display: none;
+    z-index: 20;
+}
+
+.account-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-con {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.edit {
+    background: transparent;
+    border: none;
+    color:rgb(216, 216, 216);
+    font-size: 15px;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 50px;
+    padding: 7px 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+.edit:hover {
+    background-color: rgb(61, 61, 61);
+    color: rgb(84, 152, 255);
+}
+
+.account img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.img-btn {
+    background: transparent;
+    border: none;
+}
+
+.account a {
+    text-decoration: none;
+    color: white;
+}
+
+.as {
+    background-color: rgb(26, 26, 26);
+    padding: 20px 30px;
+    border-radius: 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.so {
+    background-color: rgb(26, 26, 26);
+    padding: 20px 100px 20px 20px;
+    border-radius: 5px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.as:hover,.so:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+.policy:hover,.terms:hover {
+    background-color: rgb(61, 61, 61);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.policy,.terms {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.close-acc {
+    background: transparent;
+    color:rgb(216, 216, 216);
+    border: none;
+    font-size: 18px;
+    position: absolute;
+    top: -5px;
+    right: -23px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.close-acc:hover {
+    background-color: rgb(61, 61, 61);
+    border-radius: 50px;
+    padding: 10px 15px;
+}
+
+.edit_profile {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 999;
+}
+
+.edit_profile form {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.edit-con {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-btn {
+background: transparent;
+border: none;
+width: 200px;
+background-color: #b5dde9;
+padding: 10px;
+font-size: 15px;
+font-weight: 550;
+color: rgb(44, 44, 44);
+border-radius: 20px;
+transition: 0.1s ease-in-out;
+}
+
+.account-btn:hover {
+    background-color: #a0d1e0;
+    box-shadow: 0 2px 3px rgb(158, 158, 158);
+}
+
+.close-acc1 {
+   border: none;
+    background: transparent;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.close-acc1:hover {
+    background-color:rgb(216, 216, 216);
+    border-radius: 50px;
+    padding: 10px 15px;
+}
+
+.acc_settings {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+}
+
+.edit_account,.edit_account2 {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+}
+
+.basic-info {
+  width: 100%;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 10px;
+  overflow: hidden;
+  color: rgb(214, 0, 0);
+}
+
+.basic-info p {
+   font-size: 20px;
+   color: rgb(114, 114, 114);
+}
+
+.basic_profile {
+    justify-content: space-between;
+}
+
+.basic-info label {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: rgb(50,50,50);
+    justify-content: space-between;
+}
+
+.bla div,.bla1 div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bla1 label {
+    width: 100%;
+}
+
+
+.bla  p {
+    font-size: 18px;
+    padding-left: 130px;
+    color: rgb(48, 48, 48);
+}
+
+.basic-info label:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.basic-info img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.acc_settings label,.acc_settings p {
+    margin: 0;
+}
+
+.basic-info .hr ,.bla .hr {
+    border-top: 1px solid rgb(224, 224, 224);
+
+}
+
+.acc-close {
+    background:transparent;
+    border:none;
+    position:absolute;
+    top:0;
+    left:0;
+    font-size: 15px;
+    color: rgb(65, 65, 65);
+    padding: 10px;
+}
+
+.acc-close i {
+    font-weight: 600;
+}
+
+.acc-close:hover {
+    background-color: rgb(223, 223, 223);
+    border-radius: 50%;
+} 
+
+#edit-profile {
+    cursor: pointer;
+    z-index: 10;
+    background:transparent;
+    border:none;
+    font-size:18px;
+    color:#42a5c4;
+    margin-left:-250px;
+    z-index: 0;
+}
+
+#edit-profile:hover {
+    color: #2e8aa7;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+}
+
+.infos label {
+    margin-bottom: -10px;
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+}
+
+.infos input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    color: rgb(39, 39, 39);
+}
+
+.edit-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.edit-btn button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.edit-btn button:last-child {
+    background-color: rgb(41, 204, 41);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.edit-btn button:last-child:hover {
+    background-color: rgb(25, 175, 25);
+}
+
+.edit-btn button:first-child:hover {
+    color: red;
+}
+
+.edit-close {
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    color: rgb(78, 78, 78);
+}
+
+.edit-close i {
+    font-weight: 600;
+}
+
+.edit-close:hover {
+    background-color: rgb(223, 223, 223);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+table a {
+    text-decoration: none;
+    color: red;
+    margin-right: 10px;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+
+
+    /* Apply background colors to even and odd rows */
+    tbody tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray */
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #ffffff; /* White */
+    }
+
